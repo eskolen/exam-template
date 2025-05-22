@@ -21,6 +21,13 @@
       padding: 10px 20px;
       font-size: 16px;
     }
+    input[type="text"],
+    input[type="email"] {
+      width: 100%;
+      padding: 8px;
+      font-size: 16px;
+      margin-bottom: 1em;
+    }
   </style>
 </head>
 <body>
@@ -29,8 +36,14 @@
   <p><strong>Describe the effects of climate change on food security globally.</strong></p>
 
   <form action="https://formspree.io/f/xgvkbaky" method="POST">
+    <!-- Hidden subject for email -->
+    <input type="hidden" name="_subject" value="Prøve1" />
+
     <label for="studentName">Your Name:</label><br>
-    <input type="text" name="studentName" required /><br><br>
+    <input type="text" name="studentName" required /><br>
+
+    <label for="email">Your Email:</label><br>
+    <input type="email" name="email" required /><br>
 
     <label for="answer">Your Answer:</label><br>
     <textarea name="answer" required></textarea><br>
